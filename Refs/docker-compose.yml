@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  clickhouse:
+    image: clickhouse/clickhouse-server:head
+    container_name: my-clickhouse-server
+    # restart: unless-stopped
+    # user: root  # <-- ADICIONE ISSO
+    ports:
+      - "8123:8123"
+      - "9009:9009"
+    environment:
+      CLICKHOUSE_PASSWORD: 123
+      # CLICKHOUSE_DB: default
+      # CLICKHOUSE_USER: default
+    # ulimits:
+    #   nofile:
+    #     soft: 262144
+    #     hard: 262144
+    # volumes:
+    #   - ./db/ch_data:/var/lib/clickhouse/
+    #   - ./db/ch_logs:/var/log/clickhouse-server/
+    # networks:
+    #   - clickhouse-network
+
+# networks:
+#   clickhouse-network:
+#     driver: bridge
