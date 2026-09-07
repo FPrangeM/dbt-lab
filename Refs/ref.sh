@@ -11,4 +11,4 @@ uv add dbt-clickhouse
 uv run dbt init --profiles-dir .
 
 # Criar link simbólico entre o profile local e o diretorio de referencia
-ln -s ./Refs/profiles.yml ~/.dbt/profiles.yml # Adicionar a flag -f se o arquivo destino ja existir
+ln ./Refs/profiles.yml ~/.dbt/profiles.yml # Adicionar a flag -f se o arquivo destino ja existir

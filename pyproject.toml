@@ -5,4 +5,8 @@ requires-python = ">=3.12, <3.13"
 dependencies = [
     "dbt>=1.0.0.40.21",
     "dbt-clickhouse>=1.10.2",
+    "duckdb>=1.5.5",
+    "ipykernel>=7.3.0",
+    "pandas>=3.0.5",
+    "sqlalchemy>=2.0.52",
 ]

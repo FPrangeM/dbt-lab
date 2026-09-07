@@ -1,0 +1,31 @@
+codigo,loja,divisional,regional,cidade,uf,formato,dt_abertura
+LOJ001,Loja São Paulo Express,Sul,Regional RS,São Paulo,SP,Express,2015-06-30
+LOJ002,Loja Campinas Hipermercado,Sudeste,Regional SP Capital,Campinas,SP,Hipermercado,2025-03-06
+LOJ003,Loja Ribeirão Preto Proximity,Norte,Regional Norte,Ribeirão Preto,SP,Proximity,2019-06-19
+LOJ004,Loja Rio de Janeiro Hipermercado,Sul,Regional RS,Rio de Janeiro,RJ,Hipermercado,2014-11-27
+LOJ005,Loja Niterói Proximity,Sudeste,Regional RJ-ES,Niterói,RJ,Proximity,2010-08-06
+LOJ006,Loja Belo Horizonte Proximity,Norte,Regional Norte,Belo Horizonte,MG,Proximity,2019-05-30
+LOJ007,Loja Uberlândia Proximity,Sudeste,Regional SP Interior,Uberlândia,MG,Proximity,2016-03-28
+LOJ008,Loja Vitória Atacarejo,Sul,Regional RS,Vitória,ES,Atacarejo,2017-08-19
+LOJ009,Loja Curitiba Supermercado,Nordeste,Regional NE Norte,Curitiba,PR,Supermercado,2017-07-20
+LOJ010,Loja Londrina Atacarejo,Sul,Regional RS,Londrina,PR,Atacarejo,2012-03-03
+LOJ011,Loja Porto Alegre Proximity,Nordeste,Regional NE Sul,Porto Alegre,RS,Proximity,2015-12-07
+LOJ012,Loja Caxias do Sul Proximity,Sul,Regional PR-SC,Caxias do Sul,RS,Proximity,2012-10-19
+LOJ013,Loja Florianópolis Proximity,Centro-Oeste,Regional Centro,Florianópolis,SC,Proximity,2016-07-29
+LOJ014,Loja Joinville Proximity,Norte,Regional Norte,Joinville,SC,Proximity,2014-04-25
+LOJ015,Loja Salvador Supermercado,Sul,Regional RS,Salvador,BA,Supermercado,2016-06-28
+LOJ016,Loja Feira de Santana Hipermercado,Sul,Regional RS,Feira de Santana,BA,Hipermercado,2018-07-11
+LOJ017,Loja Recife Express,Nordeste,Regional NE Sul,Recife,PE,Express,2013-08-25
+LOJ018,Loja Fortaleza Supermercado,Nordeste,Regional NE Sul,Fortaleza,CE,Supermercado,2025-01-12
+LOJ019,Loja São Luís Proximity,Nordeste,Regional NE Norte,São Luís,MA,Proximity,2024-03-29
+LOJ020,Loja João Pessoa Supermercado,Sudeste,Regional RJ-ES,João Pessoa,PB,Supermercado,2013-08-31
+LOJ021,Loja Brasília Express,Centro-Oeste,Regional CO Norte,Brasília,DF,Express,2024-05-09
+LOJ022,Loja Goiânia Express,Norte,Regional Norte,Goiânia,GO,Express,2011-04-04
+LOJ023,Loja Cuiabá Express,Sudeste,Regional SP Capital,Cuiabá,MT,Express,2018-12-31
+LOJ024,Loja Campo Grande Supermercado,Nordeste,Regional NE Norte,Campo Grande,MS,Supermercado,2022-09-21
+LOJ025,Loja Manaus Atacarejo,Nordeste,Regional NE Norte,Manaus,AM,Atacarejo,2018-11-16
+LOJ026,Loja Belém Express,Centro-Oeste,Regional Centro,Belém,PA,Express,2013-02-17
+LOJ027,Loja Palmas Proximity,Sudeste,Regional RJ-ES,Palmas,TO,Proximity,2022-02-02
+LOJ028,Loja Porto Velho Proximity,Nordeste,Regional NE Sul,Porto Velho,RO,Proximity,2018-12-16
+LOJ029,Loja Vitória da Conquista Supermercado,Nordeste,Regional NE Norte,Vitória da Conquista,BA,Supermercado,2021-06-06
+LOJ030,Loja Campina Grande Hipermercado,Centro-Oeste,Regional Centro,Campina Grande,PB,Hipermercado,2012-06-17
