@@ -1,0 +1,25 @@
+version: 2
+
+sources:
+  - name: raw
+    description: "Dados brutos carregados no schema raw do DuckDB"
+    # database: my-duckdb 
+    schema: raw
+    tables:
+      - name: rh
+        description: "Extract de RH com dados de colaboradores"
+        columns:
+          - name: Nome
+            description: "Nome completo do colaborador"
+          - name: CPF
+            description: "CPF formatado"
+          - name: Unidade
+            description: "Unidade/loja do colaborador"
+          - name: Data_Nascimento
+          - name: Data_Admissao
+          - name: Status_Afastamento
+          - name: Data_Inicio_Afastamento
+          - name: Data_Fim_Afastamento
+          - name: Data_Desligamento
+          - name: filename
+            description: "Arquivo de origem do registro"
