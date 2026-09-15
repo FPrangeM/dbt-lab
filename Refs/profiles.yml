@@ -11,3 +11,12 @@ clickhouse-service:
       user: 'default' # User for all database operations
       password: '123' # Password for the user
       secure: False  # Use TLS (native protocol) or HTTPS (http protocol)
+
+duckdb-service:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: /home/prange/Documentos/repos/dbt-lab/db/my-duckdb.duckdb
+      threads: 4
+      schema: main
