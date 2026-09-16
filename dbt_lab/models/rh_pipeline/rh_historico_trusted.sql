@@ -1,3 +1,5 @@
+-- depends_on: test.dbt_lab.rh_sem_registro
+
 {{config(
     materialized='incremental',
     partition_by='date(ref_data)',

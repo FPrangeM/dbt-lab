@@ -4,13 +4,14 @@
     store_failures=true
 ) }}
 
-SELECT
+select 
     ref_data,
     cpf,
     nome,
-    status,
-    data_desligamento
-FROM 
+    Status_Afastamento,
+    Data_Inicio_Afastamento,
+    Data_Fim_Afastamento
+from 
     {{ ref('rh_trusted') }}
-WHERE 
-    (status = 'DESLIGADO' AND data_desligamento IS NULL)
+where 
+    Data_Inicio_Afastamento >= Data_Fim_Afastamento
