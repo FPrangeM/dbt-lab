@@ -3,7 +3,7 @@ from sqlalchemy import create_engine,text
 
 
 df = duckdb.sql("""
-select * from read_csv('./data/extract_rh*.csv',all_varchar=True,filename=True)
+select * from read_csv('./data/extract_rh_2026-07-27_erros.csv',all_varchar=True,filename=True)
 """).df()
 # select * from read_csv('./data/extract_rh_2026-07-13.csv',all_varchar=True,filename=True)
 
