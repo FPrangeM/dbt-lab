@@ -1,6 +1,6 @@
 {{ config(
     severity='warn',
-    tags=['qualidade', 'rh', 'observabilidade'],
+    tags=['rh', 'test'],
     store_failures=true
 ) }}
 
