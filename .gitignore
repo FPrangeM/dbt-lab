@@ -1,2 +1,7 @@
 .venv
 /logs
+__pycache__/
+/.env
+.env
+*.env
+!.env.example

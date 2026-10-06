@@ -1,0 +1,147 @@
+{
+  "metadata": {
+    "dbt_schema_version": "https://schemas.getdbt.com/dbt/run-results/v6.json",
+    "dbt_version": "1.11.14",
+    "generated_at": "2026-09-25T21:38:47.845582Z",
+    "invocation_id": "079bcea0-2bf2-49f5-8500-f27c0e550830",
+    "invocation_started_at": "2026-09-25T21:38:46.180691Z",
+    "env": {}
+  },
+  "results": [
+    {
+      "status": "success",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2026-09-25T21:38:47.335241Z",
+          "completed_at": "2026-09-25T21:38:47.351115Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2026-09-25T21:38:47.351934Z",
+          "completed_at": "2026-09-25T21:38:47.449183Z"
+        }
+      ],
+      "thread_id": "Thread-1 (worker)",
+      "execution_time": 0.11622858047485352,
+      "adapter_response": {
+        "_message": "OK"
+      },
+      "message": "OK",
+      "failures": null,
+      "unique_id": "model.dbt_lab.rh_trusted",
+      "relation_name": "\"my-duckdb\".\"trusted\".\"rh_trusted\"",
+      "batch_results": null
+    },
+    {
+      "status": "warn",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2026-09-25T21:38:47.475639Z",
+          "completed_at": "2026-09-25T21:38:47.500243Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2026-09-25T21:38:47.507282Z",
+          "completed_at": "2026-09-25T21:38:47.720158Z"
+        }
+      ],
+      "thread_id": "Thread-4 (worker)",
+      "execution_time": 0.27007102966308594,
+      "adapter_response": {
+        "_message": "OK"
+      },
+      "message": "Got 3 results, configured to warn if != 0",
+      "failures": 3,
+      "unique_id": "test.dbt_lab.rh_intervalo_status",
+      "relation_name": "\"my-duckdb\".\"dbt_test__audit\".\"rh_intervalo_status\"",
+      "batch_results": null
+    },
+    {
+      "status": "warn",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2026-09-25T21:38:47.462253Z",
+          "completed_at": "2026-09-25T21:38:47.493013Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2026-09-25T21:38:47.495043Z",
+          "completed_at": "2026-09-25T21:38:47.724671Z"
+        }
+      ],
+      "thread_id": "Thread-3 (worker)",
+      "execution_time": 0.275707483291626,
+      "adapter_response": {
+        "_message": "OK"
+      },
+      "message": "Got 2 results, configured to warn if != 0",
+      "failures": 2,
+      "unique_id": "test.dbt_lab.rh_desligados",
+      "relation_name": "\"my-duckdb\".\"dbt_test__audit\".\"rh_desligados\"",
+      "batch_results": null
+    },
+    {
+      "status": "warn",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2026-09-25T21:38:47.482405Z",
+          "completed_at": "2026-09-25T21:38:47.512525Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2026-09-25T21:38:47.519190Z",
+          "completed_at": "2026-09-25T21:38:47.739835Z"
+        }
+      ],
+      "thread_id": "Thread-2 (worker)",
+      "execution_time": 0.28159046173095703,
+      "adapter_response": {
+        "_message": "OK"
+      },
+      "message": "Got 2 results, configured to warn if != 0",
+      "failures": 2,
+      "unique_id": "test.dbt_lab.rh_sem_registro",
+      "relation_name": "\"my-duckdb\".\"dbt_test__audit\".\"rh_sem_registro\"",
+      "batch_results": null
+    },
+    {
+      "status": "success",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2026-09-25T21:38:47.749007Z",
+          "completed_at": "2026-09-25T21:38:47.756069Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2026-09-25T21:38:47.756748Z",
+          "completed_at": "2026-09-25T21:38:47.829367Z"
+        }
+      ],
+      "thread_id": "Thread-1 (worker)",
+      "execution_time": 0.08268904685974121,
+      "adapter_response": {
+        "_message": "OK"
+      },
+      "message": "OK",
+      "failures": null,
+      "unique_id": "model.dbt_lab.rh_historico_trusted",
+      "relation_name": "\"my-duckdb\".\"trusted\".\"rh_historico_trusted\"",
+      "batch_results": null
+    }
+  ],
+  "elapsed_time": 0.7351393699645996,
+  "args": {
+    "which": "build",
+    "select": [
+      "tag:rh"
+    ],
+    "invocation_command": "dbt build -s tag:rh --profiles-dir /home/prange/.dbt",
+    "profiles_dir": "/home/prange/.dbt",
+    "project_dir": "/home/prange/Documentos/repos/dbt-lab/dbt_lab"
+  }
+}

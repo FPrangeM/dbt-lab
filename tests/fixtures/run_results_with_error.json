@@ -1,0 +1,64 @@
+{
+  "metadata": {
+    "dbt_schema_version": "https://schemas.getdbt.com/dbt/run-results/v6.json",
+    "dbt_version": "1.11.14",
+    "generated_at": "2026-09-21T12:00:09.400000Z",
+    "invocation_id": "8f2c0a1e-1111-4a2b-9c3d-000000000002",
+    "invocation_started_at": "2026-09-21T12:00:00.000000Z",
+    "env": {}
+  },
+  "elapsed_time": 9.42,
+  "args": {
+    "which": "test",
+    "select": ["tag:rh"],
+    "invocation_command": "dbt test -s tag:rh",
+    "profiles_dir": "/home/user/.dbt",
+    "project_dir": "/repo/dbt_lab"
+  },
+  "results": [
+    {
+      "status": "pass",
+      "timing": [{"name": "execute", "started_at": "2026-09-21T12:00:00.100000Z", "completed_at": "2026-09-21T12:00:00.200000Z"}],
+      "thread_id": "Thread-1",
+      "execution_time": 0.1,
+      "adapter_response": {"_message": "OK"},
+      "message": null,
+      "failures": null,
+      "unique_id": "test.dbt_lab.rh_desligados",
+      "relation_name": "\"my-duckdb\".\"dbt_test__audit\".\"rh_desligados\""
+    },
+    {
+      "status": "error",
+      "timing": [{"name": "execute", "started_at": "2026-09-21T12:00:00.100000Z", "completed_at": "2026-09-21T12:00:09.300000Z"}],
+      "thread_id": "Thread-2",
+      "execution_time": 9.2,
+      "adapter_response": {"_message": "Runtime error"},
+      "message": "Database Error\n  invalid input syntax for type date: \"31/02/2026\"\n  LINE 1: select date(Data_Inicio_Afastamento) from \"my-duckdb\".\"trusted\".\"rh_trusted\"",
+      "failures": null,
+      "unique_id": "test.dbt_lab.rh_intervalo_status",
+      "relation_name": "\"my-duckdb\".\"dbt_test__audit\".\"rh_intervalo_status\""
+    },
+    {
+      "status": "fail",
+      "timing": [{"name": "execute", "started_at": "2026-09-21T12:00:00.100000Z", "completed_at": "2026-09-21T12:00:00.500000Z"}],
+      "thread_id": "Thread-3",
+      "execution_time": 0.4,
+      "adapter_response": {"_message": "OK"},
+      "message": "Got 1 results, configured to fail if != 0",
+      "failures": 1,
+      "unique_id": "test.dbt_lab.rh_sem_registro",
+      "relation_name": "\"my-duckdb\".\"dbt_test__audit\".\"rh_sem_registro\""
+    },
+    {
+      "status": "skipped",
+      "timing": [],
+      "thread_id": "Thread-1",
+      "execution_time": 0.0,
+      "adapter_response": {},
+      "message": null,
+      "failures": null,
+      "unique_id": "test.dbt_lab.rh_cpf_duplicado",
+      "relation_name": null
+    }
+  ]
+}

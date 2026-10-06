@@ -1,0 +1,31 @@
+{
+  "metadata": {
+    "dbt_schema_version": "https://schemas.getdbt.com/dbt/run-results/v6.json",
+    "dbt_version": "1.11.14",
+    "generated_at": "2026-09-21T12:00:03.000000Z",
+    "invocation_id": "8f2c0a1e-1111-4a2b-9c3d-000000000004",
+    "invocation_started_at": "2026-09-21T12:00:00.000000Z",
+    "env": {}
+  },
+  "elapsed_time": 0.44,
+  "args": {
+    "which": "run",
+    "select": ["rh_trusted"],
+    "invocation_command": "dbt run -s rh_trusted",
+    "profiles_dir": "/home/user/.dbt",
+    "project_dir": "/repo/dbt_lab"
+  },
+  "results": [
+    {
+      "status": "success",
+      "timing": [{"name": "execute", "started_at": "2026-09-21T12:00:00.100000Z", "completed_at": "2026-09-21T12:00:00.400000Z"}],
+      "thread_id": "Thread-1",
+      "execution_time": 0.3,
+      "adapter_response": {"_message": "OK", "rows_affected": 58},
+      "message": "OK",
+      "failures": null,
+      "unique_id": "model.dbt_lab.rh_trusted",
+      "relation_name": "\"my-duckdb\".\"trusted\".\"rh_trusted\""
+    }
+  ]
+}

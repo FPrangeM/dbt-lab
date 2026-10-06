@@ -1,0 +1,19 @@
+{
+  "metadata": {
+    "dbt_schema_version": "https://schemas.getdbt.com/dbt/run-results/v6.json",
+    "dbt_version": "1.11.14",
+    "generated_at": "2026-09-21T12:00:01.000000Z",
+    "invocation_id": "8f2c0a1e-1111-4a2b-9c3d-000000000003",
+    "invocation_started_at": "2026-09-21T12:00:00.000000Z",
+    "env": {}
+  },
+  "elapsed_time": 0.02,
+  "args": {
+    "which": "test",
+    "select": ["tag:inexistente"],
+    "invocation_command": "dbt test -s tag:inexistente",
+    "profiles_dir": "/home/user/.dbt",
+    "project_dir": "/repo/dbt_lab"
+  },
+  "results": []
+}

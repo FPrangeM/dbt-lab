@@ -1,0 +1,131 @@
+{
+  "metadata": {
+    "dbt_schema_version": "https://schemas.getdbt.com/dbt/manifest/v12.json",
+    "dbt_version": "1.11.14",
+    "generated_at": "2026-09-25T21:38:46.574897Z",
+    "invocation_id": "079bcea0-2bf2-49f5-8500-f27c0e550830",
+    "invocation_started_at": "2026-09-14T18:49:25.321248+00:00",
+    "env": {},
+    "project_name": "dbt_lab",
+    "project_id": "acb6705861e0ff701e1effbe81effa6f",
+    "user_id": "c8fc751e-4f31-4dfd-97c8-f912138434c8",
+    "send_anonymous_usage_stats": true,
+    "adapter_type": "duckdb",
+    "quoting": {
+      "database": true,
+      "schema": true,
+      "identifier": true,
+      "column": null
+    },
+    "run_started_at": "2026-09-14T18:49:25.321405+00:00"
+  },
+  "nodes": {
+    "test.dbt_lab.rh_intervalo_status": {
+      "name": "rh_intervalo_status",
+      "resource_type": "test",
+      "unique_id": "test.dbt_lab.rh_intervalo_status",
+      "meta": {
+        "title": "Intervalo de afastamento inválido",
+        "audience": "RH",
+        "business_rule": "A data de fim do afastamento não pode ser anterior à data de início do afastamento.",
+        "impact": "Datas invertidas quebram o cálculo de dias de afastamento e geram relatórios de férias e licenças incorretos.",
+        "action": "Conferir as datas de início e fim do afastamento no sistema de RH e corrigir os registros apontados.",
+        "sample_columns": [
+          "Nome",
+          "CPF",
+          "Data_Inicio_Afastamento",
+          "Data_Fim_Afastamento"
+        ]
+      },
+      "config": {
+        "severity": "warn",
+        "store_failures": true,
+        "meta": {}
+      },
+      "depends_on": {
+        "nodes": [
+          "model.dbt_lab.rh_trusted"
+        ]
+      },
+      "attached_node": null,
+      "relation_name": "\"my-duckdb\".\"dbt_test__audit\".\"rh_intervalo_status\""
+    },
+    "test.dbt_lab.rh_desligados": {
+      "name": "rh_desligados",
+      "resource_type": "test",
+      "unique_id": "test.dbt_lab.rh_desligados",
+      "meta": {
+        "title": "Colaboradores desligados sem data de desligamento",
+        "audience": "RH",
+        "business_rule": "Todo colaborador com status DESLIGADO precisa ter a data de desligamento preenchida.",
+        "impact": "Sem a data de desligamento não é possível calcular tempo de casa, e os indicadores de turnover e de quadro de colaboradores ficam incorretos.",
+        "action": "Preencher a data de desligamento no sistema de RH para os colaboradores apontados e reenviar o extrato semanal.",
+        "sample_columns": [
+          "Nome",
+          "CPF",
+          "Status",
+          "Data_Desligamento"
+        ]
+      },
+      "config": {
+        "severity": "warn",
+        "store_failures": true,
+        "meta": {}
+      },
+      "depends_on": {
+        "nodes": [
+          "model.dbt_lab.rh_trusted"
+        ]
+      },
+      "attached_node": null,
+      "relation_name": "\"my-duckdb\".\"dbt_test__audit\".\"rh_desligados\""
+    },
+    "test.dbt_lab.rh_sem_registro": {
+      "name": "rh_sem_registro",
+      "resource_type": "test",
+      "unique_id": "test.dbt_lab.rh_sem_registro",
+      "meta": {
+        "title": "Colaboradores que sumiram do extrato semanal",
+        "audience": "RH",
+        "business_rule": "Um colaborador presente no extrato da semana anterior não pode desaparecer do extrato atual.",
+        "impact": "A ausência pode ser um erro na extração ou um desligamento não registrado. Nos dois casos o quadro de colaboradores da empresa fica subestimado.",
+        "action": "Confirmar com a operação se os colaboradores apontados foram desligados. Se não foram, solicitar o reenvio do extrato da semana.",
+        "sample_columns": [
+          "Nome",
+          "CPF",
+          "Unidade"
+        ]
+      },
+      "config": {
+        "severity": "warn",
+        "store_failures": true,
+        "meta": {}
+      },
+      "depends_on": {
+        "nodes": [
+          "model.dbt_lab.rh_trusted"
+        ]
+      },
+      "attached_node": null,
+      "relation_name": "\"my-duckdb\".\"dbt_test__audit\".\"rh_sem_registro\""
+    },
+    "test.dbt_lab.rh_cpf_duplicado": {
+      "name": "rh_cpf_duplicado",
+      "resource_type": "test",
+      "unique_id": "test.dbt_lab.rh_cpf_duplicado",
+      "meta": {},
+      "config": {
+        "severity": "error",
+        "store_failures": false,
+        "meta": {}
+      },
+      "depends_on": {
+        "nodes": [
+          "model.dbt_lab.rh_trusted"
+        ]
+      },
+      "attached_node": null,
+      "relation_name": null
+    }
+  }
+}
